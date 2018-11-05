@@ -75,13 +75,13 @@ class LoginPage extends Component {
   }
   _countToZero = () => {
     const myTimer = setInterval(() => {
-      // if (this.state.time === 0) {
-      //   clearInterval(myTimer);
-      //   this.setState({
-      //     error: ""
-      //   });
-      //   return;
-      // }
+      if (this.state.time === 0) {
+        clearInterval(myTimer);
+        this.setState({
+          error: ""
+        });
+        return;
+      }
       this.setState(
         prevState => ({
           time: prevState.time - 1
